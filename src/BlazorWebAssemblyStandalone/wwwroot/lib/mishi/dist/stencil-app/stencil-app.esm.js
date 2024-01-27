@@ -1,0 +1,2 @@
+import{p as t,b as o}from"./p-1797735c.js";export{s as setNonce}from"./p-1797735c.js";const e=()=>{const s=import.meta.url;const o={};if(s!==""){o.resourcesUrl=new URL(".",s).href}return t(o)};e().then((s=>o([["p-e8db483a",[[1,"my-component",{first:[1],middle:[1],last:[1]}]]]],s)));
+//# sourceMappingURL=stencil-app.esm.js.map
