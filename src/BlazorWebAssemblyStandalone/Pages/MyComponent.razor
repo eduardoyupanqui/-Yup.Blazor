@@ -1,0 +1,53 @@
+﻿@page "/mycomponent"
+@inject IJSRuntime JSRuntime
+
+<PageTitle>MyComponent</PageTitle>
+@* <my-component /> es un web component *@
+<h1>MyComponent</h1>
+
+
+@* 1 Statico*@
+<my-component first="Eduardo" middle="Manuel" last="Yupanqui"></my-component>
+
+@* 2 Con VanillaJS*@
+<my-component id="mycomponent"></my-component>
+<script>
+  var mycomponent = document.getElementById('mycomponent');
+  mycomponent.first = "Eduardo";
+  mycomponent.middle = "Manuel";
+  mycomponent.last = "Yupanqui";
+</script>
+
+@* 3 Con blazor*@
+<my-component first="@First" middle="@Middle" last="@Last"></my-component>
+@code {
+  private string First = "Eduardo";
+  private string Middle = "Manuel";
+  private string Last = "Yupanqui";
+}
+
+@* 4 Con blazor y JSInterop*@
+<my-component @ref="mycomponent"></my-component>
+<script>
+  var jsInterop = jsInterop || {};
+  jsInterop.initializeMyComponent = function (myElement, me) {
+    myElement.first = me.first;
+    myElement.middle = me.middle;
+    myElement.last = me.last;
+  };
+</script>
+@code {
+  private ElementReference mycomponent;
+  protected override async Task OnAfterRenderAsync(bool firstRender)
+  {
+    if (firstRender)
+    {
+      await JSRuntime.InvokeVoidAsync("jsInterop.initializeMyComponent", mycomponent, new
+      {
+        first = "Eduardo",
+        middle = "Manuel",
+        last = "Yupanqui"
+      });
+    }
+  }
+}
