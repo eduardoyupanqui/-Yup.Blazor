@@ -19,11 +19,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wasm", "Wasm", "{8D71891A-F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyStandalone", "src\BlazorWebAssemblyStandalone\BlazorWebAssemblyStandalone.csproj", "{56526558-EA89-4A4F-9A79-919F0F1A9578}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAppAuto", "src\BlazorWebAppAuto\BlazorWebAppAuto\BlazorWebAppAuto.csproj", "{25006781-2C7F-49F3-97F9-A839041BDCAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAppAuto", "src\BlazorWebAppAuto\BlazorWebAppAuto\BlazorWebAppAuto.csproj", "{25006781-2C7F-49F3-97F9-A839041BDCAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAppAuto.Client", "src\BlazorWebAppAuto\BlazorWebAppAuto.Client\BlazorWebAppAuto.Client.csproj", "{312B55D2-F015-4598-AD7D-7A36FDD5C7D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAppAuto.Client", "src\BlazorWebAppAuto\BlazorWebAppAuto.Client\BlazorWebAppAuto.Client.csproj", "{312B55D2-F015-4598-AD7D-7A36FDD5C7D3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auto", "Auto", "{F3D3D5CE-3A40-48A5-9C09-9F2B24C4E4C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F4F97D78-C26D-4EE8-A37A-F38F982BEFA5}"
+	ProjectSection(SolutionItems) = preProject
+		nginx\nginx.conf = nginx\nginx.conf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
